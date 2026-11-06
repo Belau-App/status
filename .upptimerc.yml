@@ -1,31 +1,28 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Uptime monitor and status page for Belau Link — https://status.belau.app
+# Runs entirely on GitHub (Actions + Pages), so it keeps working when Cloudflare does not.
+owner: Belau-App
+repo: status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Project page (belau.app)
+    url: https://belau.app
+  - name: Demo app (demo.belau.app)
+    url: https://demo.belau.app
+  - name: API (api.belau.app)
+    url: https://api.belau.app/health
+  - name: Warning mirror (alerts.belau.app)
+    url: https://alerts.belau.app
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.belau.app
+  name: Belau Link status
+  introTitle: "**Belau Link** service status"
+  introMessage: Independent checks every five minutes from GitHub, outside the Cloudflare network that runs Belau Link. This is the demo stage; it is not an official government service.
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Belau Link
+      href: https://belau.app
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+workflowSchedule:
+  uptime: "*/5 * * * *"
