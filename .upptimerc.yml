@@ -8,6 +8,8 @@ sites:
     url: https://belau.app
   - name: Demo app (demo.belau.app)
     url: https://demo.belau.app
+  - name: Admin console demo (admin.belau.app)
+    url: https://admin.belau.app
   - name: API (api.belau.app)
     url: https://api.belau.app/health
   - name: Warning mirror (alerts.belau.app)
